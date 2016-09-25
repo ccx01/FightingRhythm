@@ -1,0 +1,83 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yuki_run",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5,
+  "sample": 20,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "paths": {
+      "img": {
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "d28e9833-afbb-4bf4-b9a0-c8c9a7a307f1"
+                }
+              },
+              {
+                "frame": 0.05,
+                "value": {
+                  "__uuid__": "6bc624a1-f5fb-4669-9df7-6e0e96b1df7c"
+                }
+              },
+              {
+                "frame": 0.1,
+                "value": {
+                  "__uuid__": "cca8def0-48d3-4141-9af2-978180ad0eb8"
+                }
+              },
+              {
+                "frame": 0.15,
+                "value": {
+                  "__uuid__": "dfcd3147-ea1c-4868-a8b7-633af1304ed5"
+                }
+              },
+              {
+                "frame": 0.2,
+                "value": {
+                  "__uuid__": "543505c4-5891-4951-a7b4-8af53530141e"
+                }
+              },
+              {
+                "frame": 0.25,
+                "value": {
+                  "__uuid__": "f5470fa7-e236-41c7-a018-cbce148526ad"
+                }
+              },
+              {
+                "frame": 0.3,
+                "value": {
+                  "__uuid__": "2f581fdc-db68-4c86-8bda-867467363ee5"
+                }
+              },
+              {
+                "frame": 0.35,
+                "value": {
+                  "__uuid__": "e57b909a-6ad5-46ff-ab62-08e71062837c"
+                }
+              },
+              {
+                "frame": 0.4,
+                "value": {
+                  "__uuid__": "b15c7795-b27b-434f-96ab-aff114f195f9"
+                }
+              },
+              {
+                "frame": 0.45,
+                "value": {
+                  "__uuid__": "b68086ce-23b8-43c4-b556-04c212a4e500"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "events": []
+}

@@ -1,0 +1,74 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yuki_stand",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.8,
+  "sample": 10,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {}
+    },
+    "paths": {
+      "img": {
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "f7b94143-d96f-4862-bac4-acddcec89d0b"
+                }
+              },
+              {
+                "frame": 0.1,
+                "value": {
+                  "__uuid__": "36eafceb-c417-4473-9f35-9c6bf72b9656"
+                }
+              },
+              {
+                "frame": 0.2,
+                "value": {
+                  "__uuid__": "7f5de138-4c23-4a3f-81ae-8b5068f8cb03"
+                }
+              },
+              {
+                "frame": 0.3,
+                "value": {
+                  "__uuid__": "c2c83243-c16a-4b96-b86c-7574c50dd81e"
+                }
+              },
+              {
+                "frame": 0.4,
+                "value": {
+                  "__uuid__": "450ede77-db22-4363-8938-5e17365df786"
+                }
+              },
+              {
+                "frame": 0.5,
+                "value": {
+                  "__uuid__": "46f9afa8-327e-4a6c-b64a-bb9f5dd5d55b"
+                }
+              },
+              {
+                "frame": 0.6,
+                "value": {
+                  "__uuid__": "4b68d7fc-01ce-4193-ad90-2cdcc9dcee32"
+                }
+              },
+              {
+                "frame": 0.7,
+                "value": {
+                  "__uuid__": "526782ef-3765-45a4-b955-7cfc02ff1860"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "events": []
+}
