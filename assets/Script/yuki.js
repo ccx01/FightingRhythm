@@ -8,6 +8,24 @@ cc.Class({
     },
 
     onLoad: function () {
+        var cfg = {
+            type: 'arBox',
+            x: 0,
+            y: 0,
+            w: 150,
+            h:120
+        }
+        this.addBox(cfg);
+
+        var cfg = {
+            type: 'bdBox',
+            x: 0,
+            y: 0,
+            w: 50,
+            h:80
+        }
+        this.addBox(cfg);
+
         if(this.control) {
         	this.cmd();	
         } else {

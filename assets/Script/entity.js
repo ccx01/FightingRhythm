@@ -11,11 +11,15 @@ cc.Class({
         hpMax: 0,
         hp: 0,
         control: false,
-        playerBox: {
+        arBox: {
             default: null,
             type: cc.Prefab
         },
-        enemyBox: {
+        bdBox: {
+            default: null,
+            type: cc.Prefab
+        },
+        atBox: {
             default: null,
             type: cc.Prefab
         },
@@ -28,6 +32,22 @@ cc.Class({
 
         this.node.scaleX = this.face;
         this.xSpeed = this.xMaxSpeed * this.face;
+    },
+
+    addBox: function(cfg) {
+        var box = cc.instantiate(this[cfg.type]);
+
+        if(this.control) {
+            cfg.tag = 0;
+        } else {
+            cfg.tag = 1;
+        }
+        
+        this.node.addChild(box);
+        box.setPosition(cfg.x, cfg.y);
+        box.getComponents(cc.Collider)[0].tag = cfg.tag;
+        box.getComponents(cc.Collider)[0].size.width = cfg.w;
+        box.getComponents(cc.Collider)[0].size.height = cfg.h;
     },
 
     stateSet: function(s) {

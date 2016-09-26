@@ -10,9 +10,9 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "enemyBox",
+    "_name": "arBox",
     "_objFlags": 0,
-    "_opacity": 255,
+    "_opacity": 0,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -29,8 +29,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 100,
+      "height": 100
     },
     "_children": [],
     "_rotationX": 0,
@@ -53,12 +53,15 @@
     "_components": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 3
       }
     ],
     "_prefab": {
-      "__id__": 3
+      "__id__": 4
     },
-    "groupIndex": 1
+    "groupIndex": 3
   },
   {
     "__type__": "cc.BoxCollider",
@@ -81,11 +84,22 @@
     }
   },
   {
+    "__type__": "34ffcbwqUFGlYYSVl9CCTQe",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
-    "fileId": "5e547t/AelPxrPLEXO2DkRU"
+    "asset": {
+      "__uuid__": "5aacc0fb-b5b1-48b4-b7c3-d19591dfa2e9"
+    },
+    "fileId": "b29c0qmP9hFiL7Dd2cPOAVn"
   }
 ]

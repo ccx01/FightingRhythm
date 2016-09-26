@@ -49,9 +49,10 @@ cc.Class({
 
         var manager = cc.director.getCollisionManager();
         manager.enabled = true;
-        // manager.enabledDebugDraw = true;
-        // manager.enabledDrawBoundingBox = true;
+        manager.enabledDebugDraw = true;
+        manager.enabledDrawBoundingBox = true;
     },
+
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {

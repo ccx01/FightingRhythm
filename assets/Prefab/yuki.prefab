@@ -272,11 +272,14 @@
     "hpMax": 0,
     "hp": 0,
     "control": false,
-    "playerBox": {
+    "arBox": {
       "__uuid__": "5aacc0fb-b5b1-48b4-b7c3-d19591dfa2e9"
     },
-    "enemyBox": {
+    "bdBox": {
       "__uuid__": "1c3a3852-576e-4600-89f5-88927ed8cb62"
+    },
+    "atBox": {
+      "__uuid__": "6fc78ef6-9650-440f-9eca-bcc7616cd1f9"
     },
     "anim": {
       "__id__": 9
@@ -322,8 +325,8 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 120
+      "width": 50,
+      "height": 80
     }
   },
   {

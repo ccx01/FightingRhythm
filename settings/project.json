@@ -30,7 +30,7 @@
       false,
       false,
       false,
-      false
+      true
     ],
     [
       false,
@@ -38,14 +38,14 @@
       false,
       false,
       false,
-      false
+      true
     ],
     [
       false,
       false,
       false,
-      false,
-      false,
+      true,
+      true,
       false
     ]
   ],
@@ -54,9 +54,9 @@
     "player",
     "enemy",
     "playerBD",
-    "enemyAR",
-    "enemyAT",
-    "enemyBD"
+    "AR",
+    "AT",
+    "BD"
   ],
   "start-scene": "current"
 }

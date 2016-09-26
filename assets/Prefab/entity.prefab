@@ -264,8 +264,9 @@
     "hpMax": 0,
     "hp": 0,
     "control": false,
-    "playerBox": null,
-    "enemyBox": null
+    "arBox": null,
+    "bdBox": null,
+    "atBox": null
   },
   {
     "__type__": "cc.PrefabInfo",
