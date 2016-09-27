@@ -15,8 +15,16 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        if(other.tag != self.tag) {
-            console.log(other.tag,self.tag)
+        // tag: 0{攻击范围} 1{受击框} 2{打击框} 
+        // if(!other.enabled || !self.enabled) return;
+        if(self.tag == 0 && other.tag == 1) {
+            // 攻击范围内
+            self.node.getComponent(self.node.name).canHit = true;
+        }
+
+        if(self.tag == 2 && other.tag == 1) {
+            // 攻击
+            console.log('hit')
         }
     },
 
@@ -26,6 +34,10 @@ cc.Class({
 
     onCollisionExit: function (other, self) {
         // console.log('on collision exit');
+        var pn = self.node.parent;
+        if(self.tag == 0 && other.tag == 1) {
+            self.node.getComponent(self.node.name).canHit = false;
+        }
     },
 
     // use this for initialization

@@ -10,19 +10,8 @@ cc.Class({
         face: 1,
         hpMax: 0,
         hp: 0,
+        canHit: false,
         control: false,
-        arBox: {
-            default: null,
-            type: cc.Prefab
-        },
-        bdBox: {
-            default: null,
-            type: cc.Prefab
-        },
-        atBox: {
-            default: null,
-            type: cc.Prefab
-        },
     },
 
 
@@ -34,20 +23,25 @@ cc.Class({
         this.xSpeed = this.xMaxSpeed * this.face;
     },
 
-    addBox: function(cfg) {
-        var box = cc.instantiate(this[cfg.type]);
+    atkBox: function(x, y, w, h) {
+        // 攻击框，供帧动画调用
+        var at = this.getComponents(cc.Collider)[2];
 
-        if(this.control) {
-            cfg.tag = 0;
-        } else {
-            cfg.tag = 1;
-        }
-        
-        this.node.addChild(box);
-        box.setPosition(cfg.x, cfg.y);
-        box.getComponents(cc.Collider)[0].tag = cfg.tag;
-        box.getComponents(cc.Collider)[0].size.width = cfg.w;
-        box.getComponents(cc.Collider)[0].size.height = cfg.h;
+        at.enabled = true;
+        at.offset.x = x;
+        at.offset.y = y;
+        at.size.width = w;
+        at.size.height = h;
+    },
+
+    initBox: function() {
+        var at = this.getComponents(cc.Collider)[2];
+
+        at.enabled = false;
+        at.offset.x = 0;
+        at.offset.y = 0;
+        at.size.width = 0;
+        at.size.height = 0;
     },
 
     stateSet: function(s) {

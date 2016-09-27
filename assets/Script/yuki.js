@@ -8,34 +8,14 @@ cc.Class({
     },
 
     onLoad: function () {
-        var cfg = {
-            type: 'arBox',
-            x: 0,
-            y: 0,
-            w: 150,
-            h:120
-        }
-        this.addBox(cfg);
 
-        var cfg = {
-            type: 'bdBox',
-            x: 0,
-            y: 0,
-            w: 50,
-            h:80
-        }
-        this.addBox(cfg);
+        this.initBox();
 
         if(this.control) {
         	this.cmd();	
         } else {
             this.ai();
         }
-    },
-
-    run: function(ds) {
-    	this.stateSet("run");
-    	this.move(ds);
     },
 
     stateSet: function(s) {
@@ -59,6 +39,7 @@ cc.Class({
     stateUpadate: function(dt) {
         // 状态切换条件判断
         switch(this.state) {
+            // 跑A和跑必须分离为两种状态
             case "run":
                 if(Math.abs(this.node.x - this.xDestination) > this.xMaxSpeed * 0.01) {
                     this.node.x += this.xSpeed * dt;
@@ -71,7 +52,7 @@ cc.Class({
                 this.move();
             break;
             case "runA":
-                if(Math.abs(this.node.x - this.game.enemy.x) < 50) {
+                if(this.canHit) {
                     this.stateSet("a1");
                     this.xSpeed = 0;
                 } else if(Math.abs(this.node.x - this.xDestination) > this.xMaxSpeed * 0.01) {
@@ -111,7 +92,8 @@ cc.Class({
                 Xtouch = touch.getLocationX() - cc.winSize.width / 2;
                 self.xDestination = Xtouch;
 
-                if(Math.abs(Xtouch - self.game.enemy.x) < 50) {
+                var touchLoc = touch.getLocation();
+                if(cc.Intersection.pointInPolygon(touchLoc, self.game.enemy.getComponents(cc.Collider)[1].world.points)) {
                     self.stateSet("runA");
                 } else {
                     self.stateSet("run");
