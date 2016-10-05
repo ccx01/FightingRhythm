@@ -1,0 +1,53 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yuki_die",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.2,
+  "sample": 5,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "img": {
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "82d4a46c-0a48-430f-817e-92ed45877a0d"
+                }
+              },
+              {
+                "frame": 0.2,
+                "value": {
+                  "__uuid__": "6ce8e164-399f-43c9-99b2-72bacaa252b8"
+                }
+              },
+              {
+                "frame": 0.4,
+                "value": {
+                  "__uuid__": "c2a3485c-5954-4623-9341-2f9396483331"
+                }
+              },
+              {
+                "frame": 0.6,
+                "value": {
+                  "__uuid__": "bd8ac6bd-f4b7-455e-9dda-21ed638e3e0a"
+                }
+              },
+              {
+                "frame": 1,
+                "value": {
+                  "__uuid__": "55b86651-7868-477f-a397-ce38f6544f9c"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "events": []
+}

@@ -1,0 +1,53 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "yuki_a2",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.5,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "img": {
+        "comps": {
+          "cc.Sprite": {
+            "spriteFrame": [
+              {
+                "frame": 0,
+                "value": {
+                  "__uuid__": "9732ef3a-a8b8-4d10-b8b5-1aec1daf2def"
+                }
+              },
+              {
+                "frame": 0.03333333333333333,
+                "value": {
+                  "__uuid__": "1735bb21-29ee-4660-8144-07d2bbb695e2"
+                }
+              },
+              {
+                "frame": 0.2,
+                "value": {
+                  "__uuid__": "78a620ee-332a-4304-8e2c-dff958d5c71d"
+                }
+              },
+              {
+                "frame": 0.4,
+                "value": {
+                  "__uuid__": "e876ba7c-e595-4d9b-8a1d-cbcf2794ee6a"
+                }
+              },
+              {
+                "frame": 0.4666666666666667,
+                "value": {
+                  "__uuid__": "3ea26d28-5482-40de-bc16-ba693884a95b"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "events": []
+}

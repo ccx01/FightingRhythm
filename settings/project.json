@@ -51,8 +51,8 @@
   ],
   "excluded-modules": [],
   "group-list": [
-    "people",
-    "enemy",
+    "char",
+    "ui",
     "playerBD",
     "AR",
     "AT",

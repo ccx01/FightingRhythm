@@ -17,15 +17,43 @@ cc.Class({
     onCollisionEnter: function (other, self) {
         // tag: 0{攻击范围} 1{受击框} 2{打击框} 
         // if(!other.enabled || !self.enabled) return;
+
         if(self.tag == 0 && other.tag == 1) {
             // 攻击范围内
-            self.node.getComponent(self.node.name).canHit = true;
+            var s_comp = self.node.getComponent(self.node.name);
+            s_comp.canHit = true;
         }
 
         if(self.tag == 2 && other.tag == 1) {
             // 攻击
-            console.log('hit')
+            var o_comp = other.node.getComponent(other.node.name);
+            var s_comp = self.node.getComponent(self.node.name);
+
+            if(self.lie) {
+                o_comp.hurt({
+                    anim:"lie",
+                    xD: other.node.x + (s_comp.face * 100),
+                    damage: self.damage
+                });
+            } else {
+                o_comp.hurt({
+                    anim:"hurt",
+                    xD: self.node.x,
+                    damage: self.damage
+                }); 
+            }
+
+            s_comp.hitEffect({
+                name: self.effect.name,
+                x: self.effect.x || self.offset.x,
+                y: self.effect.y || self.offset.y
+            });
+
+
+            other.node.zIndex = 99;
+            s_comp.node.zIndex = 999;
         }
+
     },
 
     onCollisionStay: function (other, self) {
@@ -34,9 +62,9 @@ cc.Class({
 
     onCollisionExit: function (other, self) {
         // console.log('on collision exit');
-        var pn = self.node.parent;
         if(self.tag == 0 && other.tag == 1) {
-            self.node.getComponent(self.node.name).canHit = false;
+            var s_comp = self.node.getComponent(self.node.name);
+            s_comp.canHit = false;
         }
     },
 
