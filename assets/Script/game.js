@@ -310,7 +310,7 @@ cc.Class({
         this.trick.active = false;
     },
     btnMare: function() {
-        this.init("win");
+        this.init("mare");
         this.trick.active = false;
     },
 
